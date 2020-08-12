@@ -1,0 +1,147 @@
+*, html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*HEADER SECTION*/ 
+header{
+    text-align: center;
+    max-width: 500px;
+    margin: 50px auto;
+    color: hsl(234, 12%, 34%);
+}
+
+h1:not(span){
+    font-weight: 200;
+    margin: 0;
+}
+
+h1 span{
+    font-weight: 600;
+}
+
+header p{
+    font-size: 15px;
+    font-weight: 100;
+    color: hsl(229, 6%, 66%);
+}
+
+/* CARD DESIGNS*/
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.card{
+    background-color: hsl(0, 0%, 100%);
+    padding: 30px;
+    margin: 15px;
+    width: 350px;
+    box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.188), 0 6px 6px hsla(0, 0%, 0%, 0.23);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after{
+    content: '';
+    background-color: hsl(300, 100%, 25%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+}
+
+.card h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.card p{
+    color: hsl(229, 6%, 66%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 0.9rem;
+    margin: 15px 0 30px;
+}
+
+img {
+    float: right;
+    padding: 24px;
+}
+
+.supervisor::after{
+    background-color: hsl(180, 62%, 55%);
+}
+
+.team_builder::after{
+    background-color: hsl(0, 78%, 62%);
+}
+
+.karma::after{
+    background-color: hsl(34, 97%, 68%);
+}
+
+.calculator::after{
+    background-color: hsl(212, 86%, 64%);
+}
+
+/*FOOTER*/
+.attribution{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.attribution a{
+    color: hsl(234, 12%, 34%);
+}
+
+@media screen and (min-width: 900px){
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .card{
+        width: 320px;
+    }
+
+    .supervisor{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .team_builder{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .karma{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+
+    .calculator{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+}
